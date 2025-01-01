@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "To7KmcFOehxm+PGE8moxAE8PqJDm1h+7RcR1EOo5Ufk=",
+  "Source": "Payments.Orders.Web",
+  "BasePath": "_content/Payments.Orders.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,15 @@
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\bin\Debug\net8.0\Payments.Orders.Application.deps.json
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\bin\Debug\net8.0\Payments.Orders.Application.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\bin\Debug\net8.0\Payments.Orders.Application.pdb
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\bin\Debug\net8.0\Payments.Orders.Domain.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\bin\Debug\net8.0\Payments.Orders.Domain.pdb
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.csproj.AssemblyReference.cache
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.AssemblyInfoInputs.cache
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.AssemblyInfo.cs
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.csproj.CoreCompileInputs.cache
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.1A0F15F7.Up2Date
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\refint\Payments.Orders.Application.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.pdb
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\ref\Payments.Orders.Application.dll

@@ -1,0 +1,9 @@
+﻿global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.OpenApi.Models;
+global using Payments.Orders.Application.Abstractions;
+global using Payments.Orders.Application.Services;
+global using Payments.Orders.Domain;
+global using Payments.Orders.Web.Extensions;
+global using Payments.Orders.Application.Models.Orders;
+global using System.Text.Json;

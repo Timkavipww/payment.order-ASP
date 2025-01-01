@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Orders.Web", "Payments.Orders.Web\Payments.Orders.Web.csproj", "{1F72EE58-B27C-41E0-8103-FF777B46D16E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Orders.Domain", "Payments.Orders.Domain\Payments.Orders.Domain.csproj", "{8372F7EF-EB34-4CD9-B12F-A8F5EA508484}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A26CEC41-BDAE-444D-8EDF-1C53BAAB981B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Orders.Application", "Payments.Orders.Application\Payments.Orders.Application.csproj", "{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F72EE58-B27C-41E0-8103-FF777B46D16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F72EE58-B27C-41E0-8103-FF777B46D16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F72EE58-B27C-41E0-8103-FF777B46D16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F72EE58-B27C-41E0-8103-FF777B46D16E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8372F7EF-EB34-4CD9-B12F-A8F5EA508484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8372F7EF-EB34-4CD9-B12F-A8F5EA508484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8372F7EF-EB34-4CD9-B12F-A8F5EA508484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8372F7EF-EB34-4CD9-B12F-A8F5EA508484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F72EE58-B27C-41E0-8103-FF777B46D16E} = {A26CEC41-BDAE-444D-8EDF-1C53BAAB981B}
+		{8372F7EF-EB34-4CD9-B12F-A8F5EA508484} = {A26CEC41-BDAE-444D-8EDF-1C53BAAB981B}
+		{6FB910C4-5FB0-4A88-B53A-3CEA65A30EE9} = {A26CEC41-BDAE-444D-8EDF-1C53BAAB981B}
+	EndGlobalSection
+EndGlobal
