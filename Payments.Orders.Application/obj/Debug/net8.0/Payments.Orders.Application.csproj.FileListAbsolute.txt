@@ -13,3 +13,4 @@ C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payment
 C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\refint\Payments.Orders.Application.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.pdb
 C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\ref\Payments.Orders.Application.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Application\obj\Debug\net8.0\Payments.Orders.Application.sourcelink.json

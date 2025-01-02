@@ -12,3 +12,4 @@ C:\gitlocal\Payments.Orders\Payments.Orders.Domain\obj\Debug\net8.0\Payments.Ord
 C:\gitlocal\Payments.Orders\Payments.Orders.Domain\obj\Debug\net8.0\ref\Payments.Orders.Domain.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Domain\bin\Debug\net8.0\Payments.Orders.Domain.runtimeconfig.json
 C:\gitlocal\Payments.Orders\Payments.Orders.Domain\obj\Debug\net8.0\Payments.Orders.Domain.genruntimeconfig.cache
+C:\gitlocal\Payments.Orders\Payments.Orders.Domain\obj\Debug\net8.0\Payments.Orders.Domain.sourcelink.json
