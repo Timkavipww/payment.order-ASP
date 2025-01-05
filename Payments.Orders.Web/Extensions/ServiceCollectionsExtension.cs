@@ -1,4 +1,15 @@
-﻿namespace Payments.Orders.Web.Extensions;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Payments.Orders.Domain.Models;
+using Payments.Orders.Domain.Options;
+using System.Text;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using Payments.Orders.Domain.Entities;
+
+
+namespace Payments.Orders.Web.Extensions;
 
 public static class ServiceCollectionsExtension
 {
@@ -52,11 +63,67 @@ public static class ServiceCollectionsExtension
         builder.Services.AddScoped<ICartService, CartService>();
         builder.Services.AddScoped<IOrderService, OrderService>();
         builder.Services.AddScoped<ICustomerService, CustomerService>();
+        builder.Services.AddScoped<IMerchantService, MerchantService>();
 
         return builder;
     }
     public static WebApplicationBuilder AddIntegrationServices(this WebApplicationBuilder builder)
     {
+        return builder;
+    }
+    public static WebApplicationBuilder AddOptions(this WebApplicationBuilder builder)
+    {
+        builder.Services.Configure<AuthOptions>(builder.Configuration.GetSection("Authentication"));
+        builder.Services.Configure<RabbitMqOptions>(builder.Configuration.GetSection("RabbitMQ"));
+
+        return builder;
+    }
+    public static WebApplicationBuilder AddBearerAuthentication(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddAuthentication(a =>
+        {
+            a.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            a.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        })
+        .AddJwtBearer(
+        x =>
+        {
+            x.RequireHttpsMetadata = false;
+            x.SaveToken = true;
+            x.UseSecurityTokenValidators = true;
+
+            x.TokenValidationParameters = new TokenValidationParameters
+            {
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(
+                    builder.Configuration["Authentication:TokenPrivateKey"]!)),
+                ValidIssuer = builder.Configuration["Authentication:Issuer"],
+                ValidAudience = builder.Configuration["Authentication:Audience"],
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = false,
+                ValidateIssuerSigningKey = false
+
+            };
+        }
+        );
+        builder.Services.AddAuthorization(options =>
+        {
+            options.AddPolicy("Admin", policy => policy.RequireRole(RoleConsts.Admin));
+            options.AddPolicy("Merchant", policy => policy.RequireRole(RoleConsts.Merchant));
+            options.AddPolicy("User", policy => policy.RequireRole(RoleConsts.User));
+
+        });
+        builder.Services.AddTransient<IAuthService, AuthService>();
+        builder.Services.AddDefaultIdentity<UserEntity>(options =>
+        {
+            options.SignIn.RequireConfirmedAccount = false;
+            options.Password.RequiredLength = 6;
+            options.Password.RequireNonAlphanumeric = false;
+        })
+            .AddEntityFrameworkStores<OrdersDbContext>()
+            .AddUserManager<UserManager<UserEntity>>()
+            .AddUserStore<UserStore<UserEntity, IdentityRoleEntity, OrdersDbContext, long>>();
+
         return builder;
     }
 }

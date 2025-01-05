@@ -11,11 +11,12 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aff89859-ca98-4c45-9a5e-bf49c67859b9")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Payments.Orders.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+358309d60e52cccbd7c9971b61a71591702c42c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59db21b8a20ff9de827cd595973823dc9d844028")]
 [assembly: System.Reflection.AssemblyProductAttribute("Payments.Orders.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Payments.Orders.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

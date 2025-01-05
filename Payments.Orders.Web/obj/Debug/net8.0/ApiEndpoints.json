@@ -1,5 +1,57 @@
 [
   {
+    "ContainingType": "Payments.Orders.Web.Controllers.AccountsController",
+    "Method": "Login",
+    "RelativePath": "accounts/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userLoginDto",
+        "Type": "Payments.Orders.Application.Models.Authentication.UserLoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Payments.Orders.Application.Models.Authentication.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Payments.Orders.Web.Controllers.AccountsController",
+    "Method": "Register",
+    "RelativePath": "accounts/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userRegisterDto",
+        "Type": "Payments.Orders.Application.Models.Authentication.UserRegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Payments.Orders.Application.Models.Authentication.UserResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Payments.Orders.Web.Controllers.CustomerController",
     "Method": "Create",
     "RelativePath": "api/customers",

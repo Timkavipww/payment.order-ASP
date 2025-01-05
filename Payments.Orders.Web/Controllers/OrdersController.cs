@@ -1,4 +1,6 @@
-﻿namespace Payments.Orders.Web.Controllers;
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace Payments.Orders.Web.Controllers;
 
 [Route("api/orders")]
 public class OrdersController(IOrderService orders, ILogger<OrdersController> logger) : ApiBaseController
@@ -30,6 +32,7 @@ public class OrdersController(IOrderService orders, ILogger<OrdersController> lo
     }
 
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetAll()
     {
         logger.LogInformation("Method api/orders GetAll started.");
