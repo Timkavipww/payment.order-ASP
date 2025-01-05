@@ -125,3 +125,12 @@ C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.Exten
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
