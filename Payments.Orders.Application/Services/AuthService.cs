@@ -1,16 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using Payments.Orders.Application.Abstractions;
-using Payments.Orders.Application.Models.Authentication;
-using Payments.Orders.Domain.Exceptions;
-using Payments.Orders.Domain.Models;
-using Payments.Orders.Domain.Options;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Authentication;
-using System.Text;
-
-namespace Payments.Orders.Application.Services;
+﻿namespace Payments.Orders.Application.Services;
 
 public class AuthService(
     IOptions<AuthOptions> authOpt,

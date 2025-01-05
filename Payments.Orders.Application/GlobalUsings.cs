@@ -1,2 +1,20 @@
-﻿global using Payments.Orders.Application.Models.Carts;
+﻿global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Options;
+global using Microsoft.IdentityModel.Tokens;
+global using Payments.Orders.Application.Abstractions;
+global using Payments.Orders.Application.Mappers;
+global using Payments.Orders.Application.Models.Authentication;
+global using Payments.Orders.Application.Models.Carts;
+global using Payments.Orders.Application.Models.Customers;
+global using Payments.Orders.Application.Models.Merchants;
+global using Payments.Orders.Application.Models.Orders;
+global using Payments.Orders.Domain;
 global using Payments.Orders.Domain.Entities;
+global using Payments.Orders.Domain.Exceptions;
+global using Payments.Orders.Domain.Models;
+global using Payments.Orders.Domain.Options;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Authentication;
+global using System.Text;
+

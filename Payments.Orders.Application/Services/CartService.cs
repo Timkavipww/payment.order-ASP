@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Payments.Orders.Application.Abstractions;
-using Payments.Orders.Application.Mappers;
-using Payments.Orders.Domain;
-
-namespace Payments.Orders.Application.Services;
+﻿namespace Payments.Orders.Application.Services;
 
 public class CartService(OrdersDbContext _context) : ICartService
 {

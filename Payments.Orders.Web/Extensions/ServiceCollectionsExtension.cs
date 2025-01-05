@@ -1,15 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using Payments.Orders.Domain.Models;
-using Payments.Orders.Domain.Options;
-using System.Text;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using Payments.Orders.Domain.Entities;
-
-
-namespace Payments.Orders.Web.Extensions;
+﻿namespace Payments.Orders.Web.Extensions;
 
 public static class ServiceCollectionsExtension
 {

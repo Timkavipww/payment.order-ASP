@@ -1,9 +1,22 @@
-﻿global using Microsoft.AspNetCore.Mvc;
+﻿global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.HttpLogging;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.IdentityModel.Tokens;
 global using Microsoft.OpenApi.Models;
 global using Payments.Orders.Application.Abstractions;
+global using Payments.Orders.Application.Models.Authentication;
+global using Payments.Orders.Application.Models.Customers;
+global using Payments.Orders.Application.Models.Orders;
 global using Payments.Orders.Application.Services;
 global using Payments.Orders.Domain;
+global using Payments.Orders.Domain.Entities;
+global using Payments.Orders.Domain.Models;
+global using Payments.Orders.Domain.Options;
 global using Payments.Orders.Web.Extensions;
-global using Payments.Orders.Application.Models.Orders;
+global using System.Text;
 global using System.Text.Json;
+

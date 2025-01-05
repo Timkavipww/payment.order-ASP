@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-
-namespace Payments.Orders.Domain;
+﻿namespace Payments.Orders.Domain;
 
 public sealed class OrdersDbContext : IdentityDbContext<UserEntity, IdentityRoleEntity, long>
 {

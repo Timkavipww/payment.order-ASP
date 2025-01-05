@@ -1,6 +1,4 @@
-﻿using Payments.Orders.Application.Models.Authentication;
-
-namespace Payments.Orders.Web.Controllers;
+﻿namespace Payments.Orders.Web.Controllers;
 
 [Route("accounts")]
 public class AccountsController(IAuthService _authService) : ApiBaseController

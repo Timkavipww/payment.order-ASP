@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using Payments.Orders.Application.Models.Customers;
-
-namespace Payments.Orders.Web.Controllers;
+﻿namespace Payments.Orders.Web.Controllers;
 
 [Route("api/customers")]
 public class CustomerController(ICustomerService _customerService, ILogger<CustomerController> _logger) : ApiBaseController

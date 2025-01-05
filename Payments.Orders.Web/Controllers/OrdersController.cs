@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-
-namespace Payments.Orders.Web.Controllers;
+﻿namespace Payments.Orders.Web.Controllers;
 
 [Route("api/orders")]
 public class OrdersController(IOrderService orders, ILogger<OrdersController> logger) : ApiBaseController

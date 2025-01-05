@@ -1,8 +1,4 @@
-﻿using Payments.Orders.Application.Abstractions;
-using Payments.Orders.Application.Models.Merchants;
-using Payments.Orders.Domain;
-
-namespace Payments.Orders.Application.Services;
+﻿namespace Payments.Orders.Application.Services;
 public class MerchantService(OrdersDbContext _context) : IMerchantService
 {
     public async Task<MerchantDto> Create(MerchantDto merchant)

@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Payments.Orders.Application.Abstractions;
-using Payments.Orders.Application.Mappers;
-using Payments.Orders.Application.Models.Orders;
-using Payments.Orders.Domain;
-using Payments.Orders.Domain.Exceptions;
-
-namespace Payments.Orders.Application.Services;
+﻿namespace Payments.Orders.Application.Services;
 
 public class OrderService(OrdersDbContext context, ICartService cartsService) : IOrderService
 {

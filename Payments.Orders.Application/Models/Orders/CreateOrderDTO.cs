@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Payments.Orders.Application.Models.Orders;
+﻿namespace Payments.Orders.Application.Models.Orders;
 
 public class CreateOrderDTO
 {

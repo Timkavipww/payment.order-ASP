@@ -1,11 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Payments.Orders.Application.Abstractions;
-using Payments.Orders.Application.Mappers;
-using Payments.Orders.Application.Models.Customers;
-using Payments.Orders.Domain;
-using System.Runtime.InteropServices;
-
-namespace Payments.Orders.Application.Services;
+﻿namespace Payments.Orders.Application.Services;
 
 public class CustomerService(OrdersDbContext _context) : ICustomerService
 {
