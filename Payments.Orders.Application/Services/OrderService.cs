@@ -11,6 +11,16 @@ public class OrderService(OrdersDbContext context, ICartService cartsService) : 
 {
     public async Task<OrderDTO> Create(CreateOrderDTO order)
     {
+
+        var orderByOrderNumber = await context.Orders.FirstOrDefaultAsync(x =>
+            x.OrderNumber == order.OrderNumber && x.MerchantId == order.MerchantId);
+
+        if (orderByOrderNumber != null)
+        {
+            throw new DublicateEntityException($"Order with orderNumber {order.OrderNumber} is exist for merchant " +
+                                               $"{order.MerchantId}");
+        }
+
         if (order.Cart == null)
         {
             throw new ArgumentNullException();
@@ -28,9 +38,7 @@ public class OrderService(OrdersDbContext context, ICartService cartsService) : 
         var orderSaveResult = await context.Orders.AddAsync(entity);
         await context.SaveChangesAsync();
 
-        var orderEntityResult = orderSaveResult.Entity;
-
-        return orderEntityResult.ToDTO();
+        return orderSaveResult.Entity.ToDTO();
     }
 
     public async Task<OrderDTO> GetById(long orderId)
@@ -64,6 +72,7 @@ public class OrderService(OrdersDbContext context, ICartService cartsService) : 
         var entity = await context.Orders
             .Include(o => o.Cart)
             .ThenInclude(c => c.CartItems)
+            .AsNoTracking()
             .ToListAsync();
 
         return entity.Select(x => x.ToDTO()).ToList();
