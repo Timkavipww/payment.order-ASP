@@ -65,7 +65,7 @@ public class AuthService(
         return GenerateToken(response);
 
     }
-    public async Task<UserResponse> CreateUserResponseAsync(UserEntity user)
+    private async Task<UserResponse> CreateUserResponseAsync(UserEntity user)
     {
         var userRoles = await userManager.GetRolesAsync(user);
         return new UserResponse
@@ -78,7 +78,7 @@ public class AuthService(
         };
     }
 
-    public UserResponse GenerateToken(UserResponse userResponse)
+    private UserResponse GenerateToken(UserResponse userResponse)
     {
         var handler = new JwtSecurityTokenHandler();
 

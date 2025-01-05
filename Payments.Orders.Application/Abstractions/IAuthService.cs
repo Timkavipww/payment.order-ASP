@@ -6,6 +6,6 @@ public interface IAuthService
 {
     Task<UserResponse> Register(UserRegisterDto userRegisterModel);
     Task<UserResponse> Login(UserLoginDto userLoginModel);
-    Task<UserResponse> CreateUserResponseAsync(UserEntity user);
-    UserResponse GenerateToken(UserResponse userResponse);
+    //Task<UserResponse> CreateUserResponseAsync(UserEntity user);
+    //UserResponse GenerateToken(UserResponse userResponse);
 }
