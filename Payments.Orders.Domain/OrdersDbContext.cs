@@ -1,6 +1,8 @@
-﻿namespace Payments.Orders.Domain;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-public sealed class OrdersDbContext : DbContext
+namespace Payments.Orders.Domain;
+
+public sealed class OrdersDbContext : IdentityDbContext<UserEntity, IdentityRoleEntity, long>
 {
     public OrdersDbContext(DbContextOptions<OrdersDbContext> options) : base(options) { }
       
@@ -9,5 +11,6 @@ public sealed class OrdersDbContext : DbContext
     public DbSet<CartEntity> Carts { get; set; } = null!;
     public DbSet<CartItemEntity> CartItems { get; set; } = null!;
     public DbSet<OrderEntity> Orders { get; set; } = null!;
+    public DbSet<MerchantEntity> Merchants { get; set; } = null!;
 
 }
