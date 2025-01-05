@@ -1,4 +1,6 @@
-﻿namespace Payments.Orders.Web.Extensions;
+﻿using Payments.Orders.Web.BackgroundServices;
+
+namespace Payments.Orders.Web.Extensions;
 
 public static class ServiceCollectionsExtension
 {
@@ -112,6 +114,13 @@ public static class ServiceCollectionsExtension
             .AddEntityFrameworkStores<OrdersDbContext>()
             .AddUserManager<UserManager<UserEntity>>()
             .AddUserStore<UserStore<UserEntity, IdentityRoleEntity, OrdersDbContext, long>>();
+
+        return builder;
+    }
+
+    public static WebApplicationBuilder AddBackgroundService(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddHostedService<CreateOrderConsumer>();
 
         return builder;
     }

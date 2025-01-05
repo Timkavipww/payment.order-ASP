@@ -137,3 +137,4 @@ C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\System.Identity
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Payments.Orders.Web.staticwebassets.runtime.json
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\RabbitMQ.Client.dll
