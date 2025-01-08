@@ -25,7 +25,11 @@ app.UseHttpLogging();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Orders API v1");
+    options.SwaggerEndpoint("/swagger/v2/swagger.json", "Orders API v2");
+});
 app.MapControllers();
             
 

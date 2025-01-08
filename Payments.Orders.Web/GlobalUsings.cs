@@ -19,4 +19,4 @@ global using Payments.Orders.Domain.Options;
 global using Payments.Orders.Web.Extensions;
 global using System.Text;
 global using System.Text.Json;
-
+global using Asp.Versioning;

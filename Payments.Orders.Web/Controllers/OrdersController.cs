@@ -1,9 +1,13 @@
 ﻿namespace Payments.Orders.Web.Controllers;
 
-[Route("api/orders")]
+//[Route("api/orders")]
+[ApiVersion("2")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class OrdersController(IOrderService orders, ILogger<OrdersController> logger) : ApiBaseController
 {
     [HttpPost]
+    [MapToApiVersion("2")]
+
     public async Task<IActionResult> Create(CreateOrderDTO request)
     {
         logger.LogInformation($"Method api/orders Create started. Request: {JsonSerializer.Serialize(request)}");
@@ -17,6 +21,8 @@ public class OrdersController(IOrderService orders, ILogger<OrdersController> lo
     }
 
     [HttpGet("{orderId:long}")]
+    [MapToApiVersion("2")]
+
     public async Task<IActionResult> GetById(long orderId)
     {
         logger.LogInformation($"Method api/orders/{orderId} started.");
@@ -31,6 +37,8 @@ public class OrdersController(IOrderService orders, ILogger<OrdersController> lo
 
     [HttpGet]
     [Authorize]
+    [MapToApiVersion("2")]
+
     public async Task<IActionResult> GetAll()
     {
         logger.LogInformation("Method api/orders GetAll started.");
@@ -43,6 +51,8 @@ public class OrdersController(IOrderService orders, ILogger<OrdersController> lo
     }
 
     [HttpGet("customers/{customerId:long}")]
+    [MapToApiVersion("2")]
+
     public async Task<IActionResult> GetByUser(long customerId)
     {
         logger.LogInformation($"Method api/orders/customers/{customerId} GetByUser started.");
@@ -55,6 +65,8 @@ public class OrdersController(IOrderService orders, ILogger<OrdersController> lo
     }
 
     [HttpPost("{orderId:long}/reject")]
+    [MapToApiVersion("2")]
+
     public async Task<IActionResult> Reject(long orderId)
     {
         await orders.Reject(orderId);

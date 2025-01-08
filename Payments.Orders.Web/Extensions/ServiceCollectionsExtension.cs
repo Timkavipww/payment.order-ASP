@@ -1,4 +1,5 @@
 ﻿using Payments.Orders.Web.BackgroundServices;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Payments.Orders.Web.Extensions;
 
@@ -13,32 +14,67 @@ public static class ServiceCollectionsExtension
                 Version = "v1",
                 Title = "Orders API",
             });
+            options.SwaggerDoc("v2", new OpenApiInfo
+            {
+                Title = "Orders API",
+                Version = "v2"
+            });
+
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 In = ParameterLocation.Header,
-                Description = "Please enter a vaild token",
+                Description = "Please enter a valid token",
                 Name = "Authorization",
                 Type = SecuritySchemeType.Http,
                 BearerFormat = "JWT",
                 Scheme = "Bearer"
             });
             options.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
             {
+                new OpenApiSecurityScheme
                 {
-                    new OpenApiSecurityScheme
+                    Reference = new OpenApiReference
                     {
-                        Reference= new OpenApiReference
-                        {
-                            Type= ReferenceType.SecurityScheme,
-                            Id = "Bearer"
-                        }
-                    },
-                    Array.Empty<string>()
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                Array.Empty<string>()
+            }
+        });
+
+            options.DocInclusionPredicate((version, apiDesc) =>
+            {
+                if (!apiDesc.TryGetMethodInfo(out var methodInfo))
+                {
+                    return false;
                 }
+
+                var versions = methodInfo.DeclaringType?
+                    .GetCustomAttributes(true)
+                    .OfType<ApiVersionAttribute>()
+                    .SelectMany(attr => attr.Versions);
+
+                return versions?.Any(v => $"v{v.ToString()}" == version) ?? false;
             });
         });
+
+        builder.Services.AddApiVersioning(options =>
+        {
+            options.DefaultApiVersion = new ApiVersion(1, 0);
+            options.AssumeDefaultVersionWhenUnspecified = true;
+            options.ReportApiVersions = true;
+            options.ApiVersionReader = new UrlSegmentApiVersionReader();
+        }).AddApiExplorer(options =>
+        {
+            options.GroupNameFormat = "'v'VVV"; // Формат: v1
+            options.SubstituteApiVersionInUrl = true; // Включение версии в URL
+        });
+
         return builder;
     }
+
 
     public static WebApplicationBuilder AddData(this WebApplicationBuilder builder)
     {

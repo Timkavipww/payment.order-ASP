@@ -138,3 +138,7 @@ C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Payments.Orders
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\gitlocal\Payments.Orders\Payments.Orders.Web\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll

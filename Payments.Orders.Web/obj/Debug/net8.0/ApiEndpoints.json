@@ -2,7 +2,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.AccountsController",
     "Method": "Login",
-    "RelativePath": "accounts/login",
+    "RelativePath": "api/v1/Accounts/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.AccountsController",
     "Method": "Register",
-    "RelativePath": "accounts/register",
+    "RelativePath": "api/v1/Accounts/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -54,7 +54,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.CustomerController",
     "Method": "Create",
-    "RelativePath": "api/customers",
+    "RelativePath": "api/v1/Customer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -80,7 +80,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.CustomerController",
     "Method": "GetAll",
-    "RelativePath": "api/customers",
+    "RelativePath": "api/v1/Customer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -100,7 +100,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.CustomerController",
     "Method": "GetById",
-    "RelativePath": "api/customers/{id}",
+    "RelativePath": "api/v1/Customer/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -126,7 +126,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.OrdersController",
     "Method": "Create",
-    "RelativePath": "api/orders",
+    "RelativePath": "api/v2/Orders",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -142,7 +142,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.OrdersController",
     "Method": "GetAll",
-    "RelativePath": "api/orders",
+    "RelativePath": "api/v2/Orders",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -152,7 +152,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.OrdersController",
     "Method": "GetById",
-    "RelativePath": "api/orders/{orderId}",
+    "RelativePath": "api/v2/Orders/{orderId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -168,7 +168,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.OrdersController",
     "Method": "Reject",
-    "RelativePath": "api/orders/{orderId}/reject",
+    "RelativePath": "api/v2/Orders/{orderId}/reject",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -184,7 +184,7 @@
   {
     "ContainingType": "Payments.Orders.Web.Controllers.OrdersController",
     "Method": "GetByUser",
-    "RelativePath": "api/orders/customers/{customerId}",
+    "RelativePath": "api/v2/Orders/customers/{customerId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
