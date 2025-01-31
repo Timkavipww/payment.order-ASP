@@ -41,10 +41,8 @@ public class OrderService(OrdersDbContext context, ICartService cartsService) : 
             .ThenInclude(c => c.CartItems)
             .FirstOrDefaultAsync(x => x.Id == orderId);
 
-        if (entity == null)
-        {
-            throw new EntityNotFoundException($"Order entity with id {orderId} not found");
-        }
+        if (entity == null) throw new EntityNotFoundException($"Order entity with id {orderId} not found");
+        
 
         return entity.ToDTO();
     }
@@ -72,8 +70,17 @@ public class OrderService(OrdersDbContext context, ICartService cartsService) : 
     }
 
     //todo: прикрутить статусную модель для отмены заказа
-    public Task Reject(long orderId)
+    public async Task<long> Reject(long orderId)
     {
-        throw new NotImplementedException();
+        var order = context.Orders.FirstOrDefault(order => order.Id == orderId);
+
+        if(order == null) throw new EntityNotFoundException($"sad");
+
+        order.Status = OrderStatusType.Rejected;
+
+        await context.SaveChangesAsync();
+
+        return orderId;
+
     }
 }

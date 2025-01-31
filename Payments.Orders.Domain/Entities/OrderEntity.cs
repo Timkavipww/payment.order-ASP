@@ -1,9 +1,12 @@
-﻿namespace Payments.Orders.Domain.Entities;
+﻿using Payments.Orders.Domain.Models;
+
+namespace Payments.Orders.Domain.Entities;
 
 public class OrderEntity : BaseEntity
 {
     public string? Name { get; set; }
     public long OrderNumber { get; set; }
+    public OrderStatusType Status { get; set; }
 
     public CustomerEntity? Customer { get; set; }
     public long? CustomerId { get; set; }

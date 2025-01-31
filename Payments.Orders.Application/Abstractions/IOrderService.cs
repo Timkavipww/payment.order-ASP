@@ -8,5 +8,5 @@ public interface IOrderService
     Task<OrderDTO> GetById(long orderId);
     Task<List<OrderDTO>> GetByUser(long customerId);
     Task<List<OrderDTO>> GetAll();
-    Task Reject(long orderId);
+    Task<long> Reject(long orderId);
 }
