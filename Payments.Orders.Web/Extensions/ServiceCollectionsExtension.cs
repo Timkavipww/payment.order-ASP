@@ -80,7 +80,10 @@ public static class ServiceCollectionsExtension
     {
         builder.Services.AddDbContext<OrdersDbContext>(opt =>
 
-            opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+            opt.UseNpgsql(opt => {
+                builder.Configuration.GetConnectionString("DefaultConnection");
+                opt.MigrationsAssembly("Payments.Orders.Domain");
+            })
         );
         return builder;
     }

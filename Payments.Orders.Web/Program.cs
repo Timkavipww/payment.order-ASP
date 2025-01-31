@@ -1,6 +1,11 @@
+using Payments.Orders.Web.Filters;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(opt => {
+    opt.Filters.Add<ApiExceptionFilter>();
+});
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddHttpLogging(opt =>
